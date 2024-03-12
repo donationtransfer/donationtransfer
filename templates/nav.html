@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="head" id="head">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/logo/mstile-144x144.png" href=https://i.ibb.co/sgq9xJd/Screenshot-114.png>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="shortcut icon" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,400;0,800;0,900;1,100;1,200;1,400;1,900&family=Luckiest+Guy&family=Noto+Color+Emoji&family=Rubik+Beastly&family=Rubik+Distressed&family=Shantell+Sans:wght,INFM,SPAC@800,5,5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Home</title>
+    <style>
+        ::-webkit-scrollbar {
+            background: rgba(0, 0, 0, 1);
+            height: 100%;
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.69);
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            -ms-scrollbar-shadow-color: rgba(255, 255, 255, 1);
+            background: rgba(0, 0, 0, 1);
+            border-radius: 10px;
+            height: 10%;
+        }
+
+        ::-webkit-scrollbar-button {
+            border-radius: 5px;
+            background-size: auto;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 1);
+        }
+
+        .slider value {
+            width: 40%;
+            margin: 0px;
+        }
+
+        input {
+            width: 10vw;
+        }
+
+        .navbar {
+            display: inline-flex;
+            width: 100%;
+            height: 20%;
+            position: fixed;
+            top: 0px;
+            margin: 0;
+            padding: 0;
+            z-index: 110;
+        }
+
+        .header {
+            position:fixed;
+            height: 52px;
+            width: 100%;
+            z-index: 260;
+            display: inline-flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.2);
+            transform: translateY(-100%);
+            transition: transform 0.5s;
+        }
+
+        .navbar:hover .header {
+            transform: translateY(0px);
+            transition-delay: 0.2s;
+        }
+
+        .header.active {
+            transform: translateY(0px);
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            caret-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .navbar:hover .header.active {
+            z-index: 110;
+            display: inline-flex;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            transform: translateY(0px);
+            transition-delay: 0.2s;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-family: "Luckiest Guy", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+            caret-color: transparent;
+            z-index: 120;
+        }
+
+            h1:hover {
+                cursor: pointer;
+                color: white;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            }
+
+        h2 {
+            margin: 0;
+            padding: 7px 20px;
+            font-size: 18px;
+            color: white;
+            font-family: "Shantell Sans", cursive;
+            font-weight: 400;
+            font-style: normal;
+            caret-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            left: -18px;
+            top: 0px;
+            position: relative;
+            opacity: 0.8;
+            z-index: 100;
+            font-size: 16px;
+            color: black;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+        }
+
+            span:hover {
+                opacity: 1;
+                cursor: pointer;
+                color: white;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            }
+
+        b {
+            color: black;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+            font-weight: 1000;
+        }
+
+        i img {
+            float: left;
+            left: -20px;
+            top: -13px;
+            position: relative;
+            z-index: 100;
+            font-weight: bold;
+        }
+
+            i img:hover {
+                cursor: pointer;
+                font-weight: bold;
+                opacity: 1;
+            }
+
+        .menu {
+            position: fixed;
+            top: 52px;
+            left: 0px;
+            z-index: 100;
+            display: none;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-bottom: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+            .menu.hidden {
+                display: none;
+            }
+
+            .menu.visible {
+                display: grid;
+            }
+
+                .menu.visible:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+
+        [data-type="menu"] {
+            color: black;
+            font-size: 18px;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+            text-decoration: none;
+            padding: 10px 15px;
+            position: relative;
+        }
+
+            [data-type="menu"] b {
+                display: none;
+                text-decoration: none;
+                font-family: "Shantell Sans", cursive;
+                font-weight: 800;
+            }
+
+            [data-type="menu"]:hover b {
+                display: inline-flex;
+                color: black;
+                text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+            }
+
+                [data-type="menu"]:hover b:hover {
+                    color: white;
+                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+                }
+
+            [data-type="menu"]:hover, b {
+                cursor: pointer;
+                color: white;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            }
+
+        .submenu.hidden {
+            display: none;
+        }
+
+        .submenu.visible {
+            display: grid;
+        }
+
+            .submenu.visible:hover {
+                cursor: pointer;
+                opacity: 1;
+                color: white;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            }
+
+
+        [data-type="submenu"] {
+            color: black;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+            font-size: 14px;
+            padding: 7px 15px;
+            text-decoration: none;
+        }
+
+            [data-type="submenu"] b {
+                display: none;
+                text-decoration: none;
+                color: black;
+                font-family: "Shantell Sans", cursive;
+                font-weight: 800;
+                text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+            }
+
+            [data-type="submenu"]:hover b {
+                display: inline-flex;
+                color: black;
+                text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+            }
+
+                [data-type="submenu"]:hover b:hover {
+                    color: white;
+                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+                    opacity: 1;
+                }
+
+            [data-type="submenu"]:hover, b {
+                cursor: pointer;
+                color: white;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+                text-decoration: none;
+                opacity: 1;
+            }
+
+        .right {
+            float: right;
+            right: 0px;
+            top: 0px;
+            position: relative;
+            z-index: 100;
+            font-weight: 900;
+        }
+
+        .register-form, .login-form {
+            position: fixed;
+            right: 0px;
+            top: 52px;
+            z-index: 150;
+            padding: 0px 10px 44px 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            border-bottom-left-radius: 10px;
+        }
+
+        .login.hidden {
+            display: none;
+        }
+
+        .login.visible {
+            display: inline-block;
+        }
+
+            .login.visible:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+
+        .login-form.hidden {
+            display: none;
+        }
+
+        .login-form.visible {
+            display: block;
+        }
+
+        .register.hidden {
+            display: none;
+        }
+
+        .register.visible {
+            display: inline-block;
+        }
+
+            .register.visible:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+
+        .register-form.hidden {
+            display: none;
+        }
+
+        .register-form.visible {
+            display: block;
+        }
+
+        .tooltip-header {
+            font-family: "Luckiest Guy", cursive;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+            .tooltip-header:hover {
+                cursor: none;
+                opacity: 1;
+            }
+
+        form label {
+            font-family: "Luckiest Guy", cursive;
+            color: white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            font-size: 14px !important;
+            caret-color: transparent;
+            font-weight: 100;
+        }
+
+        form input {
+            margin-bottom: 10px;
+            font-family: "Luckiest Guy", cursive;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            font-family: "Luckiest Guy", cursive;
+            font-weight: 800;
+            position: fixed;
+            top: 52px;
+            border: 1px;
+            border-radius: 5px;
+            right: 10px;
+            color: white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            font-size: 16px;
+            padding: 6px 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            caret-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            .close-btn:hover {
+                opacity: 1;
+                text-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255, 1);
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.5)
+            }
+
+        #submitL, #submitR {
+            font-family: "Luckiest Guy", cursive;
+            position: fixed;
+            font-size: 16px;
+            color: white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            border: 1px;
+            border-radius: 5px;
+            text-decoration: none;
+            right: 10px;
+            font-weight: 10;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            caret-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            #submitL:hover, #submitR:hover {
+                cursor: pointer;
+                opacity: 1;
+                text-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255, 1);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+    </style>
+</head>
+<body class="navbar" id="navbar">
+    <nav class="header" id="header">
+        <div id="middle" class="middle">
+            <h1 title="Donation Transfer" id="donation transfer" class="donation transfer">
+                <i>
+                    <img src="https://i.ibb.co/sgq9xJd/Screenshot-114.png" height="48px" onclick="toggleMenu()"><a class="logo" id="logo" alt="logo" onclick="toggleMenu()"></a></img>
+                </i>
+                <span href=./home.html class="title" id="title"> Donation Transfer </span>
+            </h1>
+        </div>
+        <div id="left" class="left">
+            <c class="menu hidden" id="menu">
+                <a for="left" href="./home.html">
+                    <i class="fas fa-home" data-type="menu" id="home">
+                        <b>Home</b>
+                    </i>
+                </a>
+                <a onclick="toggleSubmenu()" for="left">
+                    <i class="fas fa-user" data-type="menu" id="account">
+                        <b>Account</b>
+                    </i>
+                </a>
+                <c class="submenu hidden" id="submenu">
+                    <a for="account" href="./hidden/account.html">
+                        <i class="fas fa-user" data-type="submenu" id=account>
+                            <b class="authenticated">My Account</b>
+                        </i>
+                    </a>
+                    <a for="account" href="./hidden/bank.html">
+                        <i class="fas fa-circle-dollar-to-slot" data-type="submenu" id=bank>
+                            <b class="authenticated">bank</b>
+                        </i>
+                    </a>
+                    <a for="account" href="./hidden/foundations.html">
+                        <i class="fas fa-ribbon" data-type="submenu" id="foundations">
+                            <b class="authenticated">Foundations</b>
+                        </i>
+                    </a>
+                    <a for="account" href="./hidden/donate.html">
+                        <i class="fas fa-heart" data-type="submenu" id="donate">
+                            <b class="authenticated">Donate</b>
+                        </i>
+                    </a>
+                    <a for="account" onclick="logout()">
+                        <i class="fas fa-right-from-bracket" data-type="submenu" id="logout">
+                            <b class="authenticated">Logout</b>
+                        </i>
+                    </a>
+                </c>
+                <a for="left" href="./about.html">
+                    <i class="fas fa-phone" data-type="menu" id="about">
+                        <b>About</b>
+                    </i>
+                </a>
+            </c>
+        </div>
+        <input type="range" min="0.5" max="1.8" step="0.01" value="1" class="slider 1" id="scaleSlider">
+        <input type="range" min="0.1" max="2" step="0.1" value="1" class="slider 2" id="contrastSlider">
+        <input type="range" min="0.1" max="2" step="0.1" value="1" class="slider 3" id="invertSlider">
+        <div id="right" class="right">
+            <h1 class="login visible" id="login" onclick="toggleLogin()">Login</h1>
+            <form id="login-form" class="login-form hidden" data-type="login">
+                <h2 class="tooltip-header">LOGIN</h2>
+                <a class="close-btn" onclick="closeForm()">X</a>
+                <label for="logemail">Email:</label><br>
+                <input type="email" id="logemail" name="loginEmail" required><br>
+                <label for="logpassword">Password:</label><br>
+                <input type="password" id="logpassword" name="loginPassword" required><br>
+                <a id="submitL" value="SUBMIT" class="submit-btn" onclick="loginUser()">submit</a>
+            </form>
+            <h1 class="register hidden" id="register" data-type="register" onclick="switchForm()">Register</h1>
+            <form id="register-form" class="register-form hidden" data-type="register">
+                <h2 class="tooltip-header">REGISTER</h2>
+                <a class="close-btn" onclick="closeForm()">X</a>
+                <label for="regEmail">Email:</label><br>
+                <input class="regEmail" type="email" id="regEmail" name="regEmail" required><br>
+                <label for="regPassword">Password:</label><br>
+                <input class="regPassword" type="password" id="regPassword" name="regPassword" required><br>
+                <label for="confirmPassword">Confirm Password:</label><br>
+                <input class="confirmPssword" type="password" id="confirmPassword" name="confirmPassword" required><br>
+                <a id="submitR" value="SUBMIT" class="submit-btn" onclick="registerUser()">submit</a>
+            </form>
+        </div>
+    </nav>
+    <script>
+
+            function registerUser() {
+                var regEmail = document.getElementById("regEmail").value;
+                var regPassword = document.getElementById("regPassword").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                var emailPattern = /\S+@\S+\.\S+/;
+                if (!emailPattern.test(regEmail)) {
+                    alert("Invalid email address");
+                    return false;
+                }
+
+                var passwordPattern = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+                if (!passwordPattern.test(regPassword)) {
+                    alert("Password must contain at least 8 characters with one uppercase letter and one numeric value");
+                    return false;
+                }
+
+                if (regPassword !== confirmPassword) {
+                    alert("Passwords do not match");
+                    return false;
+                }
+
+                fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: regEmail, password: regPassword })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            console.log("Registration successful");
+                            // Redirect or update UI accordingly
+                        } else {
+                            alert("Registration failed: " + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error during registration:', error);
+                    });
+            }
+
+        </sub>
+        <script>
+
+            function loginUser() {
+                var usernameOrEmail = document.getElementById("usernameOrEmail").value;
+                var password = document.getElementById("password").value;
+
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username_or_email: usernameOrEmail, password: password })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Login failed');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data.message);
+                        session.add('authenticated')
+                    })
+                    .catch(error => {
+                        console.error('Error during login:', error);
+                        alert('Login failed');
+                    });
+            }
+
+    </script>
+</body>
+</html>

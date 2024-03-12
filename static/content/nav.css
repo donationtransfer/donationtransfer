@@ -1,0 +1,424 @@
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 1);
+    height: 100%;
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.69);
+    border-radius: 10px;
+    height: 100%;
+}
+
+::-webkit-scrollbar-thumb {
+    -ms-scrollbar-shadow-color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    height: 10%;
+}
+
+::-webkit-scrollbar-button {
+    border-radius: 5px;
+    background-size: auto;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.slider value {
+    width: 40%;
+    margin: 0px;
+}
+
+input {
+    width: 10vw;
+}
+
+.navbar {
+    display: inline-flex;
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    z-index: 110;
+}
+
+.header {
+    position: fixed;
+    height: 52px;
+    width: 100%;
+    z-index: 260;
+    display: inline-flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+}
+
+.navbar:hover .header {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+.header.active {
+    transform: translateY(0px);
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    caret-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navbar:hover .header.active {
+    z-index: 110;
+    display: inline-flex;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+h1 {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    caret-color: transparent;
+    z-index: 120;
+}
+
+    h1:hover {
+        cursor: pointer;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+
+h2 {
+    margin: 0;
+    padding: 7px 20px;
+    font-size: 18px;
+    color: white;
+    font-family: "Shantell Sans", cursive;
+    font-weight: 400;
+    font-style: normal;
+    caret-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    left: -18px;
+    top: 0px;
+    position: relative;
+    opacity: 0.8;
+    z-index: 100;
+    font-size: 16px;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+}
+
+    span:hover {
+        opacity: 1;
+        cursor: pointer;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+
+b {
+    color: black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    font-weight: 1000;
+}
+
+i img {
+    float: left;
+    left: -20px;
+    top: -13px;
+    position: relative;
+    z-index: 100;
+    font-weight: bold;
+}
+
+    i img:hover {
+        cursor: pointer;
+        font-weight: bold;
+        opacity: 1;
+    }
+
+.menu {
+    position: fixed;
+    top: 52px;
+    left: 0px;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+    .menu.hidden {
+        display: none;
+    }
+
+    .menu.visible {
+        display: grid;
+    }
+
+        .menu.visible:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+[data-type="menu"] {
+    color: black;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+}
+
+    [data-type="menu"] b {
+        display: none;
+        text-decoration: none;
+        font-family: "Shantell Sans", cursive;
+        font-weight: 800;
+    }
+
+    [data-type="menu"]:hover b {
+        display: inline-flex;
+        color: black;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+    }
+
+        [data-type="menu"]:hover b:hover {
+            color: white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+        }
+
+    [data-type="menu"]:hover, b {
+        cursor: pointer;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+
+.submenu.hidden {
+    display: none;
+}
+
+.submenu.visible {
+    display: grid;
+}
+
+    .submenu.visible:hover {
+        cursor: pointer;
+        opacity: 1;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+
+
+[data-type="submenu"] {
+    color: black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    font-size: 14px;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+    [data-type="submenu"] b {
+        display: none;
+        text-decoration: none;
+        color: black;
+        font-family: "Shantell Sans", cursive;
+        font-weight: 800;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+    }
+
+    [data-type="submenu"]:hover b {
+        display: inline-flex;
+        color: black;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+    }
+
+        [data-type="submenu"]:hover b:hover {
+            color: white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+            opacity: 1;
+        }
+
+    [data-type="submenu"]:hover, b {
+        cursor: pointer;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+        text-decoration: none;
+        opacity: 1;
+    }
+
+.right {
+    float: right;
+    right: 0px;
+    top: 0px;
+    position: relative;
+    z-index: 100;
+    font-weight: 900;
+}
+
+.register-form, .login-form {
+    position: fixed;
+    right: 0px;
+    top: 52px;
+    z-index: 150;
+    padding: 0px 10px 44px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    border-bottom-left-radius: 10px;
+}
+
+.login.hidden {
+    display: none;
+}
+
+.login.visible {
+    display: inline-block;
+}
+
+    .login.visible:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+.login-form.hidden {
+    display: none;
+}
+
+.login-form.visible {
+    display: block;
+}
+
+.register.hidden {
+    display: none;
+}
+
+.register.visible {
+    display: inline-block;
+}
+
+    .register.visible:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+.register-form.hidden {
+    display: none;
+}
+
+.register-form.visible {
+    display: block;
+}
+
+.tooltip-header {
+    font-family: "Luckiest Guy", cursive;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+    .tooltip-header:hover {
+        cursor: none;
+        opacity: 1;
+    }
+
+form label {
+    font-family: "Luckiest Guy", cursive;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    font-size: 14px !important;
+    caret-color: transparent;
+    font-weight: 100;
+}
+
+form input {
+    margin-bottom: 10px;
+    font-family: "Luckiest Guy", cursive;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+
+.close-btn {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 800;
+    position: fixed;
+    top: 52px;
+    border: 1px;
+    border-radius: 5px;
+    right: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    font-size: 16px;
+    padding: 6px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    caret-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .close-btn:hover {
+        opacity: 1;
+        text-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255, 1);
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+
+#submitL, #submitR {
+    font-family: "Luckiest Guy", cursive;
+    position: fixed;
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    border: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    right: 10px;
+    font-weight: 10;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    caret-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    #submitL:hover, #submitR:hover {
+        cursor: pointer;
+        opacity: 1;
+        text-shadow: 0.5px 0.5px 0.5px rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+

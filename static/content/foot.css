@@ -1,0 +1,52 @@
+
+footer {
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 240;
+    overflow-X: hidden;
+    overflow-Y: hidden;
+    padding: 2px 2px 2px 2px;
+    margin: 2px 2px 2px 2px;
+}
+
+.divFooter {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    transform: translateY(3rem);
+    transition-delay: 0.5s;
+    transition: transform 2s ease;
+    z-index: 240;
+}
+
+.fa-brands {
+    font-size: 1rem;
+    z-index: 140;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 1);
+    padding: 6px 6px 6px 6px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    color: black;
+    padding: 4px 5px 4px 5px;
+    margin: 4px 5px 4px 5px;
+}
+
+    .fa-brands:hover {
+        cursor: pointer;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 200;
+        border: 2px solid rgba(0, 0, 0, 1);
+    }
+
+footer:hover .divFooter {
+    transform: translateY(-0.32rem);
+    transition-delay: 0.3s;
+}

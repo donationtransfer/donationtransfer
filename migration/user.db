@@ -1,0 +1,2 @@
+ALTER TABLE Images
+ADD COLUMN category VARCHAR(255);

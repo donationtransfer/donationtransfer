@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="head" id="head">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/logo/mstile-144x144.png" href=https://i.ibb.co/sgq9xJd/Screenshot-114.png>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="shortcut icon" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,400;0,800;0,900;1,100;1,200;1,400;1,900&family=Luckiest+Guy&family=Noto+Color+Emoji&family=Rubik+Beastly&family=Rubik+Distressed&family=Shantell+Sans:wght,INFM,SPAC@800,5,5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/scripts/nav.js"></script>
+    <script src="../static/scripts/login.js"></script>
+    <script src="../static/scripts/register.js"></script>
+    <script src="../static/scripts/index.js"></script>
+    <link rel="stylesheet" href="../static/content/nav.css">
+    <link rel="stylesheet" href="../static/content/index.css">
+    <link rel="stylesheet" href="../static/content/foot.css">
+    <title>Donation Transfer</title>
+        <style>
+                
+        main {
+            margin: 0;
+            background-image: url('https://i.ibb.co/W6xcfMM/The-Donation-Pickup-Service-is-a-great-option-for-individuals-looking-to-declutter-relocate-or-head3.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            transition: background-color 0.1s, color 0.1s;
+            position:fixed;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform-origin: top left;
+        }
+
+    </style>
+</head>
+<body>
+    <main name="main">
+        <content id="nav"></content>
+        <content id="content"></content>
+        <content id="foot"></content>
+    </main>
+    <script>
+        $('#nav').load('../templates/nav.html');
+        $('#content').load('index.html');
+        $('#foot').load('../templates/foot.html');
+    </script>
+</body>
+</html>

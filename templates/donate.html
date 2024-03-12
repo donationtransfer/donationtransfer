@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="head" id="head">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="./src/logo/mstile-144x144.png" href=https://i.ibb.co/sgq9xJd/Screenshot-114.png>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="shortcut icon" href="https://i.ibb.co/sgq9xJd/Screenshot-114.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,400;0,800;0,900;1,100;1,200;1,400;1,900&family=Luckiest+Guy&family=Noto+Color+Emoji&family=Rubik+Beastly&family=Rubik+Distressed&family=Shantell+Sans:wght,INFM,SPAC@800,5,5&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Higher">
+        <h1 class="Header A">Header</h1>
+        <div class="Containers"></div>
+    </div>
+    <div class="Foot">
+        <a class="Load More" style="content:'/2193'" id="More"></a>
+    </div>
+    <style>
+
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex-box;
+            overflow-x: hidden;
+        }
+
+        .Containers colgroup {
+            display:grid;
+            height: 100%;
+            width: 100%;
+            padding: 5px 5px 5px 5px;
+            margin: 5px 5px 5px 5px;
+            align-content: normal;
+            grid-template-columns: repeat(5, 0.2fr);
+            grid-template-rows: repeat(5, 0.2fr);
+            grid-template-areas:
+                "GA1 GA2 GA3 GA4 GA5"
+                "GA6 GA7 GA8 GA9 GA10"
+                "GA11 GA12 GA13 GA14 GA15"
+                "GA16 GA17 GA18 GA19 GA20"
+                "GA21 GA22 GA23 GA24 GA25"
+        }
+
+        .Header {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            align-content: center;
+            text-align: center;
+            grid-area: CenterTop;
+            caret-color: rgba(0, 0, 0, 0);
+            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+            font-family: "Luckiest Guy", cursive;
+            font-weight: 900;
+            background-image: url('https://i.ibb.co/BCfgBxN/night.webp');
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: cover;
+            background-position: center;
+            transition: font-size 0.3s ease;
+            font-size:5rem;
+            padding: 15px 15px 15px 15px;
+            margin: 15px 15px 15px 15px;
+        }
+
+        .Foot:hover a {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .Foot{
+            justify-content: space-between; 
+            align-content: center;
+            border-block: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.4), 0 2px 20px rgba(0,0,0,0.4), 0 30px 30px rgba(0,0,0,0.4);
+            padding: 10px 10px 10px 10px;
+            margin: 10px 10px 10px 10px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .GA1 {
+            grid-area: GA1;
+        }
+
+        .GA2 {
+            grid-area: GA2;
+        }
+
+        .GA3 {
+            grid-area: GA3;
+        }
+
+        .GA4 {
+            grid-area: GA4;
+        }
+
+        .GA5 {
+            grid-area: GA5;
+        }
+
+        .GA6 {
+            grid-area: GA6;
+        }
+
+        .GA7 {
+            grid-area: GA7;
+        }
+
+        .GA8 {
+            grid-area: GA8;
+        }
+
+        .GA9 {
+            grid-area: GA9;
+        }
+
+        .GA10 {
+            grid-area: GA10;
+        }
+
+        .GA11 {
+            grid-area: GA11;
+        }
+
+        .GA12 {
+            grid-area: GA12;
+        }
+
+        .GA13 {
+            grid-area: GA13;
+        }
+
+        .GA14 {
+            grid-area: GA14;
+        }
+
+        .GA15 {
+            grid-area: GA15;
+        }
+
+        .GA16 {
+            grid-area: GA16;
+        }
+
+        .GA17 {
+            grid-area: GA17;
+        }
+
+        .GA18 {
+            grid-area: GA18;
+        }
+
+        .GA19 {
+            grid-area: GA19;
+        }
+
+        .GA20 {
+            grid-area: GA20;
+        }
+
+        .GA21 {
+            grid-area: GA21;
+        }
+
+        .GA22 {
+            grid-area: GA22;
+        }
+
+        .GA23 {
+            grid-area: GA23;
+        }
+
+        .GA24 {
+            grid-area: GA24;
+        }
+
+        .GA25 {
+            grid-area: GA25;
+        }
+
+        .Footer {
+            grid-area: Bottom;
+        }
+
+        i {
+           caret-color: rgba(0, 0, 0, 0);
+           text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+           font-family: "Luckiest Guy", cursive;
+           font-weight: 900;
+           background-image: url('https://i.ibb.co/BCfgBxN/night.webp');
+           -webkit-background-clip: text;
+           background-clip: text;
+           color: transparent;
+           background-size: cover;
+           background-position: center;
+           transition: font-size 0.3s ease;
+        }
+
+        u {
+            visibility: hidden;
+        }
+
+        i:hover u {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        a {
+            display: grid;
+            text-decoration: none;
+        }
+
+        u {
+            text-decoration: none;
+        }
+
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSection = '?';
+            const branchesPerSection = 25;
+            const sections = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+            let currentSectionIndex = 0;
+
+            const mainContainer = document.querySelector('.Containers');
+            const loadMoreBtn = document.getElementById("More");
+
+            function createSectionContainer(section) {
+                const container = document.createElement('colgroup');
+                container.id = `Subcontainer${section}`;
+                container.className = 'branch-container';
+                mainContainer.appendChild(container);
+                return container;
+            }
+
+            let container = createSectionContainer(currentSection);
+
+            function createBranchElement(section, branchNumber) {
+                const branch = document.createElement('col');
+                branch.className = `Branch ${section}${branchNumber}`;
+                branch.setAttribute("style", `grid-area: GA${branchNumber}; visibility: visible;`);
+                branch.innerHTML = `
+                <tbody class="Branch ${section}${branchNumber}">
+                    <h2 class="H2 ${section}${branchNumber}"></h2>
+                    <div cite="" class="Division ${section}${branchNumber}">
+                        <img class="Image ${section}${branchNumber}" type="image/png" style="height:90px;width:105px;border: 1px solid rgba();box-shadow: 0 10px 15px rgba(0,0,0,0.3), 0 2px 20px rgba(0,0,0,0.2), 0 30px 30px rgba(0,0,0,0.1);" src="https://i.ibb.co/sgq9xJd/Screenshot-114.png" alt="Picture">
+                        <figcaption class="Caption A1">
+                            <a class="Link ${section}${branchNumber}1" href="/hidden/account(id).html"onclick="javascript:Tooltip(id)"><i class="fas fa-user"><u class="Alt ${section}${branchNumber}1" style="font-family:'Luckiest Guy';font-size:16px;font-weight:900;">Category</u></i></a>
+                            <a class="Link ${section}${branchNumber}2" href="/hidden/foundations/foundation(iD).html"><i class="fas fa-ribbon"><u class="Alt ${section}${branchNumber}2" style="font-family:'Luckiest Guy';font-size:16px;font-weight:900;">About</u></i></a>
+                            <a class="Link ${section}${branchNumber}3" href="/hidden/about.html"><i class="fas fa-phone"><u class="Alt ${section}${branchNumber}3" style="font-family:'Luckiest Guy';font-size:16px;font-weight:900;">Call Them</u></i></a>
+                            <a class="Link ${section}${branchNumber}4" href="/hidden/donate/event(id).html"><i class="fas fa-circle-dollar-to-slot"><u class="Alt ${section}${branchNumber}4" style="font-family:'Luckiest Guy';font-size:16px;font-weight:900;">Donate</u></i></a>
+                            <aside class="Tooltip ${section}${branchNumber}" id="Tool${section}${branchNumber}" style="display:none;" type="description" alt="Figure ${section}${branchNumber}" from="Figure ${section}${branchNumber}" for="Figure ${section}${branchNumber}">
+                                <h3 class="H3 ${section}${branchNumber}">Description</h3>
+                                <p class="Text ${section}${branchNumber}1">This is a quick description text</p>
+                                <p class="Text ${section}${branchNumber}2">This is a quick description text</p>
+                                <p class="Text ${section}${branchNumber}3">This is a quick description text</p>
+                                <p class="Text ${section}${branchNumber}4">This is a quick description text</p>
+                            </aside>
+                        </figcaption>
+                    </figure>
+                </div>
+                `;
+                return branch;
+            }
+
+            function loadBranches() {
+                for (let i = 1; i <= branchesPerSection; i++) {
+                    const branchElement = createBranchElement(currentSection, i);
+                    container.appendChild(branchElement);
+                }
+
+                currentSectionIndex++;
+                if (currentSectionIndex < sections.length) {
+                    currentSection = sections[currentSectionIndex];
+                    container = createSectionContainer(currentSection);
+                } else {
+                    loadMoreBtn.style.display = "none";
+                }
+            }
+
+            loadMoreBtn.addEventListener("click", loadBranches);
+
+            loadBranches();
+        });
+
+    </script>
+</body>
+</html>
