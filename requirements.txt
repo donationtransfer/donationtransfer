@@ -84,6 +84,7 @@ PyJWT
 pyodbc
 pyOpenSSL
 pyparsing
+pytest
 python-dateutil
 python-dotenv
 PyYAML
@@ -91,6 +92,7 @@ requests
 requests-oauthlib
 resolvelib
 rsa
+setuptools
 sfctl
 six
 SQLAlchemy
