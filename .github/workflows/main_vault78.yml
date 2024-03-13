@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'vault78'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DD2FC2479D7F4C98B5E543C148633668 }}
+          publish-profile: ${{ secrets.PUBLICATION_PROFILE }}
