@@ -5,6 +5,7 @@ argcomplete
 azure-common
 azure-core
 azure-servicefabric
+bcrypt
 certifi
 cffi
 charset-normalizer
@@ -13,6 +14,13 @@ cryptography
 distlib
 enum34
 filelock
+Flask
+Flask-Bcrypt
+Flask-Login
+Flask-Mail
+Flask-Migrate
+Flask-SQLAlchemy
+Flask-WTF
 future
 idna
 isodate
@@ -25,6 +33,7 @@ MarkupSafe
 msrest
 msrestazure
 mssql-scripter
+mysql-connector-python
 oauthlib
 platformdirs
 portalocker
@@ -32,6 +41,7 @@ psutil
 pycparser
 Pygments
 PyJWT
+pyodbc
 pytest
 python-dateutil
 PyYAML
@@ -40,9 +50,11 @@ requests-oauthlib
 resolvelib
 sfctl
 six
+SQLAlchemy
 tabulate
 tqdm
 typing_extensions
 urllib3
 virtualenv
+Werkzeug
 yamlloader
