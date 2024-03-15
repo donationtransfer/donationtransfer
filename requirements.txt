@@ -32,6 +32,7 @@ psutil
 pycparser
 Pygments
 PyJWT
+pytest
 python-dateutil
 PyYAML
 requests
